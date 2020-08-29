@@ -36,17 +36,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     .cors().disable() /*cross origin resource sharing */
                     .authorizeRequests()
                     .antMatchers(HttpMethod.GET, "/", "/login", "/signup","/login/username-taken", "/*.css").permitAll() /* users allowed w/o logging in */
-                    .antMatchers(HttpMethod.POST, "/signup").permitAll() /* GRANT ACCESS!! */
-                    .anyRequest().permitAll() /* Can be opened up with '.permitAll()' or to enable login with '.authenticated()' */
-                .and()
-                    .formLogin()
-                    .loginPage("/login") /* specifies we've made our own login page @/login */
-                    .defaultSuccessUrl("/my-profile") /* where they are sent with successful login */
+//                    .antMatchers(HttpMethod.POST, "/signup").permitAll() /* GRANT ACCESS!! */
+                    .anyRequest().permitAll(); /* Can be opened up with '.permitAll()' or to enable login with '.authenticated()' */
+//                .and()
+//                    .formLogin()
+//                    .loginPage("/login") /* specifies we've made our own login page @/login */
+//                    .defaultSuccessUrl("/my-profile") /* where they are sent with successful login */
 //                    .failureUrl("/login") /* failed login redirect */
-                .and()
-                    .logout()
-                    .logoutUrl("/logout") /* route to logout users - no controller required */
-                    .logoutSuccessUrl("/"); /* where to redirect the user after logout */
+//                .and()
+//                    .logout()
+//                    .logoutUrl("/logout") /* route to logout users - no controller required */
+//                    .logoutSuccessUrl("/"); /* where to redirect the user after logout */
     }
 
     @Override

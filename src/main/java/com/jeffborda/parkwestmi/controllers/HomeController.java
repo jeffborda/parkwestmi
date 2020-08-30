@@ -1,13 +1,16 @@
 package com.jeffborda.parkwestmi.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
 
     @GetMapping("/")
-    public String getHome() {
+    public String getHome(Model m) {
+        m.addAttribute("pageTitle", "Parkwest");
         return "home";
     }
+
 }

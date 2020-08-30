@@ -1,4 +1,12 @@
+.construction-msg-container {
+    padding-top: 20vh;
+}
+
 .construction-msg {
     font-size: 75px;
-    padding-top: 40vh;
+    padding-top: 20px;
+}
+
+.tree-logo {
+    width: 200px;
 }
